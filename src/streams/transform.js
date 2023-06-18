@@ -1,3 +1,4 @@
+import { pipeline } from 'stream/promises';
 import { Transform } from 'stream';
 
 const reverseStr = (str) => str.split('').reverse().join('');
@@ -9,7 +10,7 @@ const transform = async () => {
         },
     });
 
-    process.stdin.pipe(transformStream).pipe(process.stdout);
+    await pipeline(process.stdin, transformStream, process.stdout);
 };
 
 await transform();
