@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { writeFile } from 'fs/promises';
-import { ERROR_MESSAGE } from '../constants/constants.js';
+import { ERROR_MESSAGE } from '../constants.js';
 import { existsAsync } from '../utils/existsAsync.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));

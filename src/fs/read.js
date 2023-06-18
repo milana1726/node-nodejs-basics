@@ -1,7 +1,7 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { readFile } from 'fs/promises';
-import { ERROR_MESSAGE } from '../constants/constants.js';
+import { ERROR_MESSAGE } from '../constants.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.join(__dirname, 'files', 'fileToRead.txt');
